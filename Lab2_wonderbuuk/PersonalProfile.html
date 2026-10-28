@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Profile</title>
+</head>
+<body>
+
+
+    <header>
+        <h1>My Personal Profile</h1>
+    </header>
+
+
+    <nav
+        <a href="#about">About Me</a> | 
+        <a href="#contact">Contact Form</a>
+    </nav>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+        
+
+        <article>
+           
+            <h3>Personal Information</h3>
+            <table border="1">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Detail</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Lukman Hakim</td>
+                    <td>Student</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>22</td>
+                    <td>Senior</td>
+                </tr>
+                <tr>
+                    <td>Occupation</td>
+                    <td>Web Developer</td>
+                    <td>Part-time</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Form</h2>
+        
+
+        <form action="submit.php" method="post">
+            
+    
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+ 
+            <label>Favorite Hobbies:</label><br>
+            <input type="checkbox" id="coding" name="hobby1" value="Coding">
+            <label for="coding">Coding</label><br>
+            <input type="checkbox" id="gaming" name="hobby2" value="Gaming">
+            <label for="gaming">Gaming</label><br>
+            <input type="checkbox" id="reading" name="hobby3" value="Reading">
+            <label for="reading">Reading</label><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 My Personal Profile Page</p>
+    </footer>
+
+</body>
+</html>
