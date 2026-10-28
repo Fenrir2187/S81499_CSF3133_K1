@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+ <html lang="en">
+<!-- Error1 (Line 10): Stray end tag </head> inside <body> -->
+<!-- Error2 (Line 20): <td>Rating</td> in header row should be <th>Rating</th> -->
+<!-- Error3 (Line 26): Missing </tr> to close the Week 1 row -->
+<!-- Error4 (Line 28): colspan="3" written as text inside <td>, not as an attribute -->
+<!-- Error5 (Line 28): Wrong colspan="3" - row only has 2 cells, should be colspan="2" -->
+<!-- Error6 (Line 32): Missing </td> after "Semantic HTML" (cells are nested) -->
+<!-- Error7 (Line 39): <label for="name"> does not match <input id="fullname"> -->
+<!-- Error8 (Line 42 & 44): Radio buttons use different name attributes, so both can be selected -->
+<!-- Error9 (Line 47): <label for="labs"> does not match <input id="lab"> -->
+<!-- Error10 (Line 49): Closing tag </from> is a typo, should be </form> -->
+<!-- Error11 (Line 52): &copy missing semicolon, should be &copy; -->
+   <head> 
+       <meta charset="utf-8"> 
+       <title>Course Feedback</title> 
+   </head> 
+   
+   <body> 
+   <header> 
+       <h1>CSF3133 Course Feedback</h1> 
+   </header> 
+   
+  <nav>
+        <a href="#results">Results</a> |
+        <a href="#form">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+  </nav>
+	
+  <section id="results">
+        <h2>Feedback Summary</h2>
+
+        <table border="0">
+         
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td colspan="2">Tables and Forms</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Semantic HTML</td>
+                <td>4.0</td>
+            </tr>
+			
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>4.8</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>4.9</td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><strong>Average Rating</strong></td>
+                <td><strong>4.55</strong></td>
+            </tr>
+        </table>
+    </section>
+	
+ <section id="form">
+        <h2>Give Your Feedback</h2>
+
+        <form action="submit_feedback.php" method="post">
+
+            <label for="fullname">Name:</label>
+            <input type="text" id="fullname" name="name"><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label>Overall rating:</label><br>
+            <input type="radio" id="good"    name="rating" value="good">
+            <label for="good">Good</label>
+
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Average</label>
+
+            <input type="radio" id="poor"    name="rating" value="poor">
+            <label for="poor">Poor</label><br><br>
+
+            <input type="checkbox" id="lab" name="lab" value="yes">
+            <label for="lab">I attended all labs</label><br><br>
+
+            <fieldset>
+                <legend>Topics I want more practice on:</legend>
+
+                <input type="checkbox" id="topic-html" name="topics[]" value="html">
+                <label for="topic-html">HTML</label><br>
+
+                <input type="checkbox" id="topic-tables" name="topics[]" value="tables">
+                <label for="topic-tables">Tables</label><br>
+
+                <input type="checkbox" id="topic-forms" name="topics[]" value="forms">
+                <label for="topic-forms">Forms</label><br>
+
+                <input type="checkbox" id="topic-semantics" name="topics[]" value="semantics">
+                <label for="topic-semantics">Semantic HTML</label>
+            </fieldset>
+            <br>
+
+            <label for="section">Section / Group:</label>
+            <select id="section" name="section">
+                <option value="">-- Please choose --</option>
+                <option value="sec1">Section 1</option>
+                <option value="sec2">Section 2</option>
+                <option value="sec3">Section 3</option>
+                <option value="sec4">Section 4</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+  <section id="comments">
+        <h2>Student Comments</h2>
+
+        <article>
+            <h3> Rahman</h3>
+            <p>The tables and forms sessions were very hands-on. I would love
+               more practice on colspan and rowspan exercises.</p>
+        </article>
+    </section> 
+	
+	<footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+	
+  </body> 
+  </html>

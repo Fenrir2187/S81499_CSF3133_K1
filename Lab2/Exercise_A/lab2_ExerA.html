@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>HTML workshop by Javaholic</title>
+</head>
+<body>
+	<nav>
+		<a href="#schedule">Schedule</a> 
+        <a href="#register">Register</a>
+		<a href="#about">About</a>
+	</nav>
+	<section id="about">
+        <h2>About the Event</h2>
+        
+        <article>
+            <h3>Keynote Speaker: Muadz</h3>
+            <p>Muadz is a Senior Frontend Engineer at TechCorp with 
+			over 10 years.</p>
+		</article>
+	</section>
+	
+	<section id="schedule">
+        <h3>Schedule</h3>
+        
+        <article>
+           
+            <h3>Event Schedule</h3>
+            <table border="1">
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+					<th>Person in Charge</th>
+                </tr>
+				<tr>
+                    <td>10:00 a.m - 11:00 a.m. </td>
+                    <td>Session 1: Basic Web HTML</td>
+                    <td>UMTCC hall 2</td>
+					<td>Dr. Adib</td>
+                </tr>
+				<tr>
+					<td>10:00 p.m. - 11:00 a.m. </td>
+					<td colspan="3" align="center"><strong>Breakfast</strong></td>
+				</tr>
+                <tr>
+                    <td>11:00 a.m - 12:00 a.m. </td>
+                    <td>Session 2: Basic UI/UX</td>
+                    <td>UMTCC Hall 2</td>
+					<td>Dr. Khai</td>
+                </tr>
+                <tr>
+                    <td>12:00 a.m - 1:00 p.m. </td>
+                    <td>Session 3: Basic Web part2 PHP</td>
+                    <td>Computer Lab 1 </td>
+					<td>Dr. Rafi</td>
+                </tr>
+				
+				<tr>
+					<td>1:00 p.m. - 2:00 p.m. </td>
+					<td colspan="3" align="center"><strong>Lunch Break</strong></td>
+				</tr>
+				
+               <tr>
+                    <td>2:00 p.m - 3:45 p.m. </td>
+                    <td>Session 4: Javascript coding</td>
+                    <td>Computer Lab 2 </td>
+					<td>Dr. Irfan</td>
+                </tr>
+				
+				<tr>
+                    <td>4:00 p.m - 6:00 p.m. </td>
+                    <td>Session 5: Human Computer Interaction</td>
+                    <td>Computer Lab 3 </td>
+					<td>Dr. Syahidan</td>
+                </tr>
+				
+				<tr>
+                    <td>7:00 p.m - 8.00 p.m. </td>
+                    <td>Session 6: basic database </td>
+                    <td>BYOD </td>
+					<td>Dr. Hakim</td>
+                </tr>
+				
+				
+				
+            </table>
+        </article>
+		
+    </section>
+	<section id="register">
+        <h2>Registration</h2>
+        <p>Please fill out the form below to secure your spot.</p>
+        
+        <form action="register.html" method="post">
+            
+         
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+
+            <label for="matric">Matric Number:</label><br>
+            <input type="text" id="matric" name="matric" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+           
+            <label>Year of Study:</label><br>
+            <input type="radio" id="year1" name="year" value="1">
+            <label for="year1">Year 1</label><br>
+            <input type="radio" id="year2" name="year" value="2">
+            <label for="year2">Year 2</label><br>
+            <input type="radio" id="year3" name="year" value="3">
+            <label for="year3">Year 3</label><br>
+            <input type="radio" id="year4" name="year" value="4">
+            <label for="year4">Year 4</label><br><br>
+
+
+            <label>Sessions to Join:</label><br>
+            <input type="checkbox" id="session1" name="session1" value="HTML">
+            <label for="session1">Basic Web HTML</label><br>
+            <input type="checkbox" id="session2" name="session2" value="UI/UX">
+            <label for="session2">Basic UI/UX</label><br>
+            <input type="checkbox" id="session3" name="session3" value="PHP">
+            <label for="session3">Basic Web PHP</label><br><br>
+			<input type="checkbox" id="session4" name="session4" value="JVS">
+            <label for="session3">Javascript</label><br><br>
+			<input type="checkbox" id="session5" name="session5" value="HCI">
+            <label for="session3">Human Computer Interaction</label><br><br>
+			<input type="checkbox" id="session6" name="session6" value="DB">
+            <label for="session3">Basic Database</label><br><br>
+
+
+            <label for="faculty">Programme (FSKM):</label><br>
+            <select id="faculty" name="faculty">
+                <option value="MI">Maritime Informatic</option>
+                <option value="MC">Mobile Computing</option>
+                <option value="SE">Software Engineering</option>
+                <option value="DA">Data Analytic</option>
+            </select><br><br>
+    </section>
+	
+	 <footer>
+        <p>Organised by FSKM</p>
+        <p>&copy; 2026 Tech Youth Innovation</p>
+    </footer>
+</body>
+</html>
