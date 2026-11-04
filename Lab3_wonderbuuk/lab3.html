@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Interactive Contact Form & Calculator</title>
+</head>
+<body>
+
+    <div>
+        <h1>Haliko</h1>
+        <span>Welcome to our interactive contact page!</span>
+    </div>
+
+    <hr>
+
+    <div>
+        <div>
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+                </p>
+
+                <p>
+                    <label for="contact-date">Preferred Contact Date:</label><br>
+                    <input type="date" id="contact-date" name="contact-date">
+                </p>
+
+             
+                <p>
+                    <label for="satisfaction">Satisfaction Level (1-10):</label><br>
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5">
+                </p>
+
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Inline Calculator</h2>
+            <form oninput="result.value = parseInt(num1.value || 0) + parseInt(num2.value || 0)">
+            
+                <input type="number" id="num1" name="num1" value="0">
+                +
+        
+                <input type="number" id="num2" name="num2" value="0">
+          
+                <output name="result" for="num1 num2">0</output>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div>
+        <p>Contact Us: alnhakim2004@gmail.com | Phone: (0) 139650334</p>
+        <p>&copy; 2026 Halico. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
