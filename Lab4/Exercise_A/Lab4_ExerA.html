@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Terengganu - Tourism Promotion</title>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Internal CSS -->
+    <style>
+        meter {
+            width: 80%;
+            height: 20px;
+            margin: 10px auto;
+            display: block;
+        }
+        
+        .meter-container {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e0f2fe;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888888;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section -->
+    <header>
+        <h1>Visit Terengganu</h1>
+        <p>Explore Beautiful Islands, Rich Culture, and Delicious Local Cuisine!</p>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#video">Watch Video</a></li>
+            <li><a href="#trip">Book Trip</a></li>
+        </ul>
+    </nav>
+
+    <!-- Destinations section -->
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        
+        <!-- Place 1 -->
+        <article class="card">
+            <h3>Redang Island</h3>
+            <p>Crystal clear waters and stunning coral reefs perfect for snorkeling and diving.</p>
+            <p>Promo Price: <span class="old-price">RM 299</span> <span class="new-price">RM 199</span></p>
+        </article>
+
+        <!-- Place 2 -->
+        <article class="card">
+            <h3>Kapas Island</h3>
+            <p>A peaceful getaway with white sandy beaches and vibrant marine life.</p>
+            <p>Promo Price: <span class="old-price">RM 250</span> <span class="new-price">RM 180</span></p>
+        </article>
+
+        <!-- Place 3 -->
+        <article class="card">
+            <h3>Taman Tamadun Islam</h3>
+            <p>Explore replicas of famous Islamic monuments from around the world.</p>
+            <p>Promo Price: <span class="old-price">RM 50</span> <span class="new-price">RM 35</span></p>
+        </article>
+
+        <!-- Meter showing seats filled -->
+        <div class="meter-container">
+            <p><strong>Trip Seats Availability:</strong></p>
+            <meter min="0" max="40" value="28">28 out of 40 seats filled</meter>
+            <p>28 of 40 seats booked! Reserve yours today.</p>
+        </div>
+    </section>
+
+    <!-- Video section -->
+    <section id="video">
+        <h2>Experience Terengganu</h2>
+        <figure>
+            <video width="640" height="360" controls>
+                <source src="TERENGGANU.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption class="video-caption">Figure 1: Terengganu Promotional Highlight Video.</figcaption>
+        </figure>
+    </section>
+
+    <!-- Trip form section -->
+    <section id="trip">
+        <h2>Trip Interest Form</h2>
+        <form class="trip-form" action="#" method="post">
+            <!-- Name and Email -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Radio buttons for traveller type -->
+            <label>Traveller Type:</label>
+            <div class="radio-group">
+                <input type="radio" id="student" name="traveller_type" value="Student" checked>
+                <label for="student" class="inline-label">Student</label>
+                <input type="radio" id="staff" name="traveller_type" value="Staff">
+                <label for="staff" class="inline-label">Staff</label>
+                <input type="radio" id="public" name="traveller_type" value="Public">
+                <label for="public" class="inline-label">Public</label>
+            </div>
+
+            <!-- Checkboxes for interests -->
+            <label>Interests:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="islands" name="interests" value="Islands">
+                <label for="islands" class="inline-label">Islands</label><br>
+                <input type="checkbox" id="food" name="interests" value="Food">
+                <label for="food" class="inline-label">Food</label><br>
+                <input type="checkbox" id="culture" name="interests" value="Culture">
+                <label for="culture" class="inline-label">Culture</label><br>
+                <input type="checkbox" id="nature" name="interests" value="Nature">
+                <label for="nature" class="inline-label">Nature</label>
+            </div>
+
+            <!-- Submit button -->
+            <input type="submit" value="Register Interest">
+        </form>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 Visit Terengganu Tourism Office. All Rights Reserved.</p>
+        <address>
+            Contact us: <a href="mailto:info@visitterengganu.gov.my">info@visitterengganu.gov.my</a>
+        </address>
+    </footer>
+
+</body>
+</html>
