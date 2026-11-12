@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.H PA system services</title>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        video {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 4px;
+        }
+        figcaption {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Web Design Lab 4</h1>
+        <p>S81499_Abdul Lukman Noorhakim Bin Abdul Halikan</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#contact">Contact Form</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2 class="underline-title">PA system</h2>
+        <p>Perkhidmatan PA system seluruh Kuala Terengganu</p>
+    </section>
+
+    <section id="media">
+        <h2>Embedded Media</h2>
+        <figure>
+            <video width="400" height="300" controls>
+                <source src="PA_system.mp4" type="video/mp4">
+                Pelayar anda tidak menyokong tag video.
+            </video>
+            <figcaption>Figure 1: PA system tingkat 2</figcaption>
+        </figure>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <label>Favorite Hobbies:</label>
+            <div>
+                <input type="checkbox" id="coding" name="hobby" value="coding">
+                <label for="coding">Coding</label><br>
+                <input type="checkbox" id="gaming" name="hobby" value="gaming">
+                <label for="gaming">Gaming</label><br>
+                <input type="checkbox" id="reading" name="hobby" value="reading">
+                <label for="reading">Reading</label>
+            </div>
+
+            <input type="submit" value="Submit Form">
+        </form>
+    </section>
+
+    <footer>
+        <p>Lab 4 Exercise by S81499</p>
+    </footer>
+
+</body>
+</html>
