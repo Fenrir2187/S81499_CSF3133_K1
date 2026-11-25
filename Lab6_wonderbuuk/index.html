@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Quiz</title>
-    <!-- Link external CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="quiz-container">
-        <!-- Header section introducing the quiz -->
         <header>
             <h1>Web Development Quiz</h1>
             <p>Test your knowledge of HTML, CSS, and JavaScript!</p>
         </header>
 
-        <!-- Main section for timer, question, and answer options -->
         <main id="quiz-box">
             <div class="timer-bar">
                 <span id="question-number">Question 1 of 5</span>
@@ -26,16 +23,13 @@
             <section id="question-section">
                 <h2 id="question-text">Question will load here...</h2>
                 <div id="options-container" class="options-grid">
-                    <!-- Answer option buttons will be added here by JS -->
                 </div>
             </section>
 
-            <!-- Feedback section after answering -->
             <section id="feedback-section" class="feedback hidden">
                 <p id="feedback-text"></p>
             </section>
 
-            <!-- Buttons to submit answer, go to next question, or restart -->
             <div class="controls">
                 <button id="submit-btn" onclick="checkAnswer()" disabled>Submit Answer</button>
                 <button id="next-btn" onclick="nextQuestion()" class="hidden">Next Question</button>
@@ -43,13 +37,11 @@
             </div>
         </main>
 
-        <!-- Footer section to display final score -->
         <footer id="score-footer">
             <p id="score-display">Score: 0 / 5</p>
         </footer>
     </div>
 
-    <!-- Link external JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

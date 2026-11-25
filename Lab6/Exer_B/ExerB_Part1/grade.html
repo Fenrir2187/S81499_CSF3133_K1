@@ -1,0 +1,26 @@
+ <!-- Error 1 (grade.html, Line 14): Missing 'return' in onsubmit="checkMark()" caused the form to reload and wipe out the result (fixed to onsubmit="return checkMark()"). -->
+ <!-- Error 2 (grade.html, Line 22): Function call onclick="showtable()" had wrong casing (fixed to onclick="showTable()"). -->
+ <!-- Error 3 (grade.html, Line 24): Script tag linked to non-existent "grades.js" instead of "grade.js" (fixed to src="grade.js"). -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Grade Calculator</title>
+</head>
+<body>
+  <h2>Student Grade Calculator</h2>
+  <form name="gradeForm" onsubmit="return checkMark()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+    <label for="mark">Mark (0-100): </label>
+    <input type="text" id="mark" name="mark"><br>
+    <button type="submit">Check Grade</button>
+  </form>
+  <p id="result"></p>
+  <button onclick="showTable()">Show Grade Table</button>
+  <div id="tableContainer"></div>
+  <script src="grade.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-// Questions Array storing questions, options, and correct answer
 const questions = [
     {
         question: "Which HTML tag is used to link an external JavaScript file?",
@@ -27,7 +26,6 @@ const questions = [
     }
 ];
 
-// Quiz state variables
 let shuffledQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -35,7 +33,6 @@ let selectedOption = null;
 let timerInterval;
 let timeLeft = 15;
 
-// Randomly shuffles the questions array
 function shuffleQuestions() {
     shuffledQuestions = [...questions];
     for (let i = shuffledQuestions.length - 1; i > 0; i--) {
@@ -44,7 +41,6 @@ function shuffleQuestions() {
     }
 }
 
-// Starts a 15-second countdown timer for the current question
 function startTimer() {
     clearInterval(timerInterval);
     timeLeft = 15;
@@ -61,24 +57,23 @@ function startTimer() {
     }, 1000);
 }
 
-// Displays the current question and its answer option buttons
+
 function displayQuestion() {
     selectedOption = null;
     const currentQ = shuffledQuestions[currentQuestionIndex];
 
-    // Update question counter and question text
+
     document.getElementById("question-number").textContent = 
         `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
     document.getElementById("question-text").textContent = currentQ.question;
 
-    // Reset feedback and buttons
     const feedbackSection = document.getElementById("feedback-section");
     feedbackSection.className = "feedback hidden";
     document.getElementById("submit-btn").classList.remove("hidden");
     document.getElementById("submit-btn").disabled = true;
     document.getElementById("next-btn").classList.add("hidden");
 
-    // Clear old options and create new buttons
+
     const optionsContainer = document.getElementById("options-container");
     optionsContainer.innerHTML = "";
 
@@ -91,7 +86,7 @@ function displayQuestion() {
     });
 }
 
-// Handles when a user clicks an option button
+
 function selectOption(buttonElement, optionText) {
     const allButtons = document.querySelectorAll(".option-btn");
     allButtons.forEach(btn => btn.classList.remove("selected"));
@@ -101,7 +96,6 @@ function selectOption(buttonElement, optionText) {
     document.getElementById("submit-btn").disabled = false;
 }
 
-// Checks whether the selected answer is correct and updates the score
 function checkAnswer() {
     if (!selectedOption) return;
 
@@ -111,7 +105,6 @@ function checkAnswer() {
     const feedbackText = document.getElementById("feedback-text");
     const allButtons = document.querySelectorAll(".option-btn");
 
-    // Disable all option buttons after submitting
     allButtons.forEach(btn => {
         btn.disabled = true;
         if (btn.textContent === currentQ.answer) {
@@ -121,7 +114,6 @@ function checkAnswer() {
         }
     });
 
-    // Show feedback and update score
     feedbackSection.classList.remove("hidden");
     if (selectedOption === currentQ.answer) {
         score++;
@@ -135,12 +127,10 @@ function checkAnswer() {
     document.getElementById("score-display").textContent = 
         `Score: ${score} / ${shuffledQuestions.length}`;
 
-    // Swap Submit button with Next button
     document.getElementById("submit-btn").classList.add("hidden");
     document.getElementById("next-btn").classList.remove("hidden");
 }
 
-// Automatically marks question wrong if timer hits 0
 function handleTimeOut() {
     const currentQ = shuffledQuestions[currentQuestionIndex];
     const feedbackSection = document.getElementById("feedback-section");
@@ -162,7 +152,6 @@ function handleTimeOut() {
     document.getElementById("next-btn").classList.remove("hidden");
 }
 
-// Moves to the next question or finishes the quiz
 function nextQuestion() {
     currentQuestionIndex++;
 
@@ -174,7 +163,6 @@ function nextQuestion() {
     }
 }
 
-// Displays final result in the footer when all questions are completed
 function showFinalScore() {
     clearInterval(timerInterval);
     document.getElementById("question-text").textContent = "Quiz Completed!";
@@ -189,7 +177,6 @@ function showFinalScore() {
         `Final Score: ${score} out of ${shuffledQuestions.length}`;
 }
 
-// Starts or restarts the quiz
 function startQuiz() {
     score = 0;
     currentQuestionIndex = 0;
@@ -201,5 +188,4 @@ function startQuiz() {
     startTimer();
 }
 
-// Run startQuiz automatically when the page loads
 window.onload = startQuiz;
